@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,7 +20,7 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /*
@@ -29,5 +31,5 @@ main {
   width: 450px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 140px 0 0;
+  padding: 140px 0;
 }
