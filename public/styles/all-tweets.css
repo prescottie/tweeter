@@ -5,45 +5,46 @@
   border-radius: 5px;
 }
 
-.tweet-content,
+section article main,
 .tweet-container header,
 .tweet-container footer {
   padding: 8px;
 }
 
-.tweet-container header {
+section article header {
   background-color: #eee;
   display: flex;
   align-items: flex-start;
   border-radius: 4px 4px 0 0;
 }
 
-.user-avatar {
+section article header img {
   margin-right: 10px;
   border-radius: 5px;
 }
 
-.user-name {
+section article header h1 {
   margin: 0;
   flex-grow: 1;
 }
 
-.user-handle {
+section article header p {
   margin: 0.5em 0;
 }
 
-.tweet-container footer {
+section article footer {
   border-top: 1px solid #eee;
 }
-.tweet-container footer {
-  font-size: 0.75em;
+section article footer {
   display: flex;
+  font-size: 0.75em;
 }
 
-.tweet-timestamp {
+section article footer p {
   flex-grow: 1;
+  margin: 0;
 }
-.tweet-actions {
+section article footer i {
   padding: 2px;
   color: #00a087;
   visibility: hidden;
