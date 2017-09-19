@@ -6,6 +6,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!--External Font  -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
@@ -14,9 +15,11 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -42,6 +45,24 @@
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+      </section>
+      <section class="tweet-container">
+        <article class="tweet">
+          <header>
+            <img class="user-avatar" src="http://fillmurray.com/50/50" alt="billyboi">
+              <h1 class="user-name">Bill Fields</h1>
+              <p class="user-handle">@MrFields</p>
+          </header>
+          <main class="tweet-content">
+            <p>Little tweet here</p>
+          </main>
+          <footer>
+            <a class="tweet-timestamp" href="#">10 days ago</a>
+            <i class="fa fa-flag tweet-actions" aria-hidden="true"></i>
+            <i class="fa fa-retweet tweet-actions" aria-hidden="true"></i>
+            <i class="fa fa-heart-o tweet-actions" aria-hidden="true"></i>
+          </footer>
+        </article>
       </section>
     </main>
 
