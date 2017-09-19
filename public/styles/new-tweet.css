@@ -25,3 +25,7 @@ textarea {
 form {
   position: relative;
 }
+
+.char-limit-exceeded {
+  color: #ff0000;
+}
