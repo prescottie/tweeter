@@ -51,10 +51,12 @@ $(function() {
     if (input.val().length > 140) {
       $(".new-tweet").prepend(tooManyChars);
       tooManyChars.fadeOut(5000);
+      return;
     }
     if (!input.val()) {
       $(".new-tweet").prepend(emptyTweet);
       emptyTweet.fadeOut(5000);
+      return;
     }
     const tweetContent = $("form").serialize();
     $.post("/tweets", tweetContent, function(result) {
