@@ -51,3 +51,8 @@ section article footer i {
 .tweet:hover .tweet-actions {
   visibility: visible;
 }
+
+.error {
+  color: tomato;
+  background-color: #eee;
+}

@@ -41,9 +41,24 @@ $(function() {
 
   $("form").on("click", "input", function(event) {
     event.preventDefault();
+    const input = $("textarea");
+    const emptyTweet = $(
+      "<div>NO POSTING EMPTY TWEETS, YOU TWIT</div>"
+    ).addClass("error");
+    const tooManyChars = $("<div>Character Limit Exceeded!</div>").addClass(
+      "error"
+    );
+    if (input.val().length > 140) {
+      $(".new-tweet").prepend(tooManyChars);
+      tooManyChars.fadeOut(5000);
+    }
+    if (!input.val()) {
+      $(".new-tweet").prepend(emptyTweet);
+      emptyTweet.fadeOut(5000);
+    }
     const tweetContent = $("form").serialize();
     $.post("/tweets", tweetContent, function(result) {
-      $("textarea").val("");
+      input.val("");
       loadTweets();
     });
   });
