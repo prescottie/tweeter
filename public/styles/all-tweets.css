@@ -1,4 +1,4 @@
-.tweet-container {
+.tweet {
   background-color: #fff;
   margin: 2em;
   border: 1px solid #ccc;
@@ -6,8 +6,8 @@
 }
 
 section article main,
-.tweet-container header,
-.tweet-container footer {
+#tweets-container header,
+#tweets-container footer {
   padding: 8px;
 }
 
@@ -50,6 +50,6 @@ section article footer i {
   visibility: hidden;
 }
 
-.tweet-container:hover .tweet-actions {
+.tweet:hover .tweet-actions {
   visibility: visible;
 }
