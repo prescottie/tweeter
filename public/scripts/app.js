@@ -56,6 +56,7 @@ function createTweetElement(tweetObj) {
   $(function() {
     const $article = $("<article>").addClass("tweet");
     $("#tweets-container").append($article);
+
     const $img = $("<img>").attr("src", tweetObj.user.avatars.small);
     const $h1 = $("<h1>").text(tweetObj.user.name);
     const $userHandle = $("<p>").text(tweetObj.user.handle);
