@@ -16,6 +16,12 @@ textarea {
   margin: 5px 0;
   width: 100%;
 }
+section form input {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #00a087;
+  padding: 4px;
+}
 
 .counter {
   position: absolute;

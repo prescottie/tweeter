@@ -32,6 +32,18 @@ section article header p {
   margin: 0.5em 0;
 }
 
+section article main p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 section article footer {
   display: flex;
   font-size: 0.75em;
@@ -46,6 +58,10 @@ section article footer i {
   color: #00a087;
   padding: 2px;
   visibility: hidden;
+}
+
+.tweet-actions:hover {
+  cursor: pointer;
 }
 
 .tweet:hover .tweet-actions {

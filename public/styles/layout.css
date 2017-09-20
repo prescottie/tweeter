@@ -15,6 +15,11 @@ html {
 /*
  * Global layout stuff
  */
+input,
+button,
+submit {
+  border: none;
+}
 
 body {
   background-color: #eee;

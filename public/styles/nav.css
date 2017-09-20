@@ -19,4 +19,20 @@
 }
 #nav-bar .header {
   font-size: 2em;
+  flex-grow: 1;
+}
+
+#nav-bar button {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #00a087;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 8px;
+}
+
+#nav-bar .compose-toggle {
+  color: #fff;
+  background-color: #00a087;
+  border: 1px solid #fff;
 }

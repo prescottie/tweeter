@@ -5,6 +5,12 @@
  */
 
 $(function() {
+  $("#nav-bar").on("click", "button", function(event) {
+    $(this).toggleClass("compose-toggle");
+    $(".new-tweet").slideToggle("fast");
+    $("textarea").focus();
+  });
+
   function createTweetElement(tweetObj) {
     const $article = $("<article>").addClass("tweet");
     const $img = $("<img>").attr("src", tweetObj.user.avatars.small);
@@ -53,7 +59,7 @@ $(function() {
       tooManyChars.fadeOut(5000);
       return;
     }
-    if (!input.val()) {
+    if (!input.val() || input.val() === null) {
       $(".new-tweet").prepend(emptyTweet);
       emptyTweet.fadeOut(5000);
       return;
