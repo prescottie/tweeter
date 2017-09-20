@@ -12,20 +12,20 @@ section article main,
 }
 
 section article header {
-  background-color: #eee;
   display: flex;
   align-items: flex-start;
+  background-color: #eee;
   border-radius: 4px 4px 0 0;
 }
 
 section article header img {
-  margin-right: 10px;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 section article header h1 {
-  margin: 0;
   flex-grow: 1;
+  margin: 0;
 }
 
 section article header p {
@@ -33,11 +33,9 @@ section article header p {
 }
 
 section article footer {
-  border-top: 1px solid #eee;
-}
-section article footer {
   display: flex;
   font-size: 0.75em;
+  border-top: 1px solid #eee;
 }
 
 section article footer p {
@@ -45,8 +43,8 @@ section article footer p {
   margin: 0;
 }
 section article footer i {
-  padding: 2px;
   color: #00a087;
+  padding: 2px;
   visibility: hidden;
 }
 

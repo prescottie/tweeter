@@ -52,8 +52,8 @@ var data = [
   }
 ];
 
-function createTweetElement(tweetObj) {
-  $(function() {
+$(function() {
+  function createTweetElement(tweetObj) {
     const $article = $("<article>").addClass("tweet");
     $("#tweets-container").append($article);
 
@@ -85,13 +85,17 @@ function createTweetElement(tweetObj) {
       .append($favIcon);
 
     $article.append($footer);
-  });
-}
+  }
 
-function renderTweets(tweets) {
-  tweets.forEach(tweet => {
-    createTweetElement(tweet);
-  });
-  return tweets;
-}
-renderTweets(data);
+  function loadTweets() {
+    $.get("/tweets");
+  }
+
+  function renderTweets(tweets) {
+    tweets.forEach(tweet => {
+      createTweetElement(tweet);
+    });
+    return tweets;
+  }
+  renderTweets(data);
+});
