@@ -10,6 +10,32 @@ $(function() {
     $(".new-tweet").slideToggle("fast");
     $("textarea").focus();
   });
+  function timeSince(date) {
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+      return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+      return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+      return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+      return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+      return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
 
   function createTweetElement(tweetObj) {
     const $article = $("<article>").addClass("tweet");
@@ -29,8 +55,8 @@ $(function() {
 
     $article.append($main);
 
-    const tweetDate = Date(tweetObj.created_at);
-    const $timestamp = $("<p>").text(tweetDate);
+    const tweetDate = timeSince(tweetObj.created_at);
+    const $timestamp = $("<p>").text(tweetDate + " ago");
     const $flagIcon = $("<i>").addClass("fa fa-flag tweet-actions");
     const $retweetIcon = $("<i>").addClass("fa fa-retweet tweet-actions");
     const $favIcon = $("<i>").addClass("fa fa-heart-o tweet-actions");
