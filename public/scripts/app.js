@@ -12,29 +12,30 @@ $(function() {
   });
   function timeSince(date) {
     var seconds = Math.floor((new Date() - date) / 1000);
-
     var interval = Math.floor(seconds / 31536000);
-
     if (interval > 1) {
-      return interval + " years";
+      return interval + " years ago";
     }
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) {
-      return interval + " months";
+      return interval + " months ago";
     }
     interval = Math.floor(seconds / 86400);
     if (interval > 1) {
-      return interval + " days";
+      return interval + " days ago";
     }
     interval = Math.floor(seconds / 3600);
     if (interval > 1) {
-      return interval + " hours";
+      return interval + " hours ago";
     }
     interval = Math.floor(seconds / 60);
     if (interval > 1) {
-      return interval + " minutes";
+      return interval + " minutes ago";
     }
-    return Math.floor(seconds) + " seconds";
+    if (seconds < 5) {
+      return "Just now";
+    }
+    return Math.floor(seconds) + " seconds ago";
   }
 
   function createTweetElement(tweetObj) {
@@ -56,7 +57,7 @@ $(function() {
     $article.append($main);
 
     const tweetDate = timeSince(tweetObj.created_at);
-    const $timestamp = $("<p>").text(tweetDate + " ago");
+    const $timestamp = $("<p>").text(tweetDate);
     const $flagIcon = $("<i>").addClass("fa fa-flag tweet-actions");
     const $retweetIcon = $("<i>").addClass("fa fa-retweet tweet-actions");
     const $favIcon = $("<i>").addClass("fa fa-heart-o tweet-actions");
