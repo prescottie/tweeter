@@ -6,7 +6,7 @@ const PORT = 8080;
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-// const db = require("./lib/in-memory-db");
+const sassMiddleware = require("node-sass-middleware");
 const { MongoClient } = require("mongodb");
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 MongoClient.connect(MONGODB_URI, (err, db) => {
@@ -16,6 +16,15 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   }
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
+  var srcPath = __dirname + "/../public/styles/scss";
+  var destPath = __dirname + "/../public/styles/css";
+
+  app.use(
+    sassMiddleware({
+      src: srcPath,
+      dest: destPath
+    })
+  );
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.use(express.static("public"));

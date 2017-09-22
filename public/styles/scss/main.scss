@@ -1,0 +1,19 @@
+$brand-primary: #00a087;
+$default-pad: 8px;
+
+/*
+ * Global layout stuff
+ */
+@import "layout";
+
+/* Styling for all Nav bar elements*/
+
+@import "nav";
+
+/*Styling for new tweet section*/
+
+@import "new-tweet";
+
+/*Styling for all tweets in db*/
+
+@import "all-tweets";
