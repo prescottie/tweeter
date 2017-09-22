@@ -4,6 +4,7 @@ $(function() {
   //Clicking compose button in Nav will toggle a compose tweet section into DOM
   $(".nav-bar").on("click", "button", function() {
     $(this).toggleClass("compose-toggle");
+    $(".new-tweet").stop();
     $(".new-tweet").slideToggle("fast");
     $("textarea").focus();
   });
