@@ -7,6 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 ![Main Page of tweets](public/images/main.png)
+![Compose tweet](public/images/compose-tweet.png)
 
 ## Getting Started
 
