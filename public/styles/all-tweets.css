@@ -1,3 +1,5 @@
+/*Styling for all tweets in db*/
+
 .tweet {
   background-color: #fff;
   margin: 2em;
@@ -5,34 +7,34 @@
   border-radius: 5px;
 }
 
-section article main,
-#tweets-container header,
-#tweets-container footer {
+.tweets-container main,
+.tweets-container header,
+.tweets-container footer {
   padding: 8px;
 }
 
-section article header {
+.tweet-header {
   display: flex;
   align-items: flex-start;
   background-color: #eee;
   border-radius: 4px 4px 0 0;
 }
 
-section article header img {
+.user-avatar {
   border-radius: 5px;
   margin-right: 10px;
 }
 
-section article header h1 {
+.user-name {
   flex-grow: 1;
   margin: 0;
 }
 
-section article header p {
+.user-handle {
   margin: 0.5em 0;
 }
 
-section article main p {
+.tweet-content {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
@@ -44,17 +46,17 @@ section article main p {
   hyphens: auto;
 }
 
-section article footer {
+.tweet-footer {
   display: flex;
   font-size: 0.75em;
   border-top: 1px solid #eee;
 }
 
-section article footer p {
+.tweet-timestamp {
   flex-grow: 1;
   margin: 0;
 }
-section article footer i {
+.tweet-actions {
   color: #00a087;
   padding: 2px;
   visibility: hidden;
