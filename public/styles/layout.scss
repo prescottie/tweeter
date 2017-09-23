@@ -4,6 +4,17 @@
  * Do not modify these two selectors, please
  */
 
+@media (max-width: 976px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 977px) {
+  .container {
+    width: 55%;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -34,5 +45,4 @@ body {
   background-color: #fff;
   margin: 0 auto;
   padding: 140px 0;
-  width: 450px;
 }
